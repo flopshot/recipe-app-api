@@ -48,7 +48,7 @@ class PublicUsersApiTest(TestCase):
     def test_password_too_short(self):
         """test pwd must be greater than 5 chars or fails"""
 
-        payload = {"email": "test@najera.com", "password": "pw"}
+        payload = {"email": "test@najera.com", "password": "pw", "name": "Tes"}
 
         res = self.client.post(CREATE_USER_URL, payload)
 
